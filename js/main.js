@@ -30,6 +30,10 @@ let app = new Vue({
                     that.weatherList = response.data.data.forecast
                 })
                 .catch(function (err) {})
+        },
+        changeCity: (city) => {
+            this.city = city;
+            this.searchWeather()
         }
     }
 })
